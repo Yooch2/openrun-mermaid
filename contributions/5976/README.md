@@ -2,10 +2,11 @@
 
 - 이슈: https://github.com/mermaid-js/mermaid/issues/5976
 - PR: https://github.com/mermaid-js/mermaid/pull/8571
+- 작업 브랜치: https://github.com/Yooch2/mermaid/tree/bug/5976_flowchart-ellipse-shape
 - 담당: [@Yooch2](https://github.com/Yooch2)
 - 상태: 메인테이너 리뷰 대기 (10/27 제출)
 
-팀 예비 이슈로 확보해 두었다가, 메인 이슈를 마친 뒤 추가로 진행했습니다.
+메인 이슈 [#7013](../7013/)(PR #8456)이 머지되지 않을 경우에 대비해 **추가로 진행한 기여**입니다. 팀 예비 이슈로 확보해 두었다가, #7013 PR을 마친 뒤 작업했습니다.
 
 ## 문제
 

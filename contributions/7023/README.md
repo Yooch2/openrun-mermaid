@@ -2,6 +2,7 @@
 
 - 이슈: https://github.com/mermaid-js/mermaid/issues/7023
 - PR: https://github.com/mermaid-js/mermaid/pull/8421
+- 작업 브랜치: https://github.com/llmdlng/mermaid/tree/bug/7023_flowchart-click-node
 - 담당: [@llmdlng](https://github.com/llmdlng)
 - 상태: 메인테이너 리뷰 대기 (10/11 제출)
 

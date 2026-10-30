@@ -2,6 +2,7 @@
 
 - 이슈: https://github.com/mermaid-js/mermaid/issues/7041
 - PR: https://github.com/mermaid-js/mermaid/pull/8506
+- 작업 브랜치: https://github.com/hoseongdev/mermaid/tree/feature/7041_flowchart-multiple-node-styles
 - 담당: [@hoseongdev](https://github.com/hoseongdev)
 - 상태: 메인테이너 리뷰 대기 (10/20 제출)
 

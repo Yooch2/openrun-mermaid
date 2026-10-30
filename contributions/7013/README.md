@@ -2,6 +2,7 @@
 
 - 이슈: https://github.com/mermaid-js/mermaid/issues/7013
 - PR: https://github.com/mermaid-js/mermaid/pull/8456
+- 작업 브랜치: https://github.com/Yooch2/mermaid/tree/bug/7013_keep-inline-code-in-labels
 - 담당: [@Yooch2](https://github.com/Yooch2)
 - 상태: 메인테이너 리뷰 대기 (10/16 제출, 커밋 3개)
 

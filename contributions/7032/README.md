@@ -2,6 +2,7 @@
 
 - 이슈: https://github.com/mermaid-js/mermaid/issues/7032
 - PR: https://github.com/mermaid-js/mermaid/pull/8459
+- 작업 브랜치: https://github.com/Yun-seoung/mermaid/tree/bug/7032_flowchart-edge-id-whitespace
 - 담당: [@Yun-seoung](https://github.com/Yun-seoung)
 - 상태: ✅ **머지 완료** (10/17 제출 → 10/20 머지)
 
