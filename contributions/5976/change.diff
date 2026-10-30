@@ -1,0 +1,68 @@
+diff --git a/.changeset/flowchart-ellipse-shape.md b/.changeset/flowchart-ellipse-shape.md
+new file mode 100644
+index 000000000..f8e50528e
+--- /dev/null
++++ b/.changeset/flowchart-ellipse-shape.md
+@@ -0,0 +1,5 @@
++---
++'mermaid': patch
++---
++
++fix: render flowchart ellipse nodes (`A(-text-)`) instead of failing with "No such shape: ellipse"
+diff --git a/e2e/diagrams/flowchart/pr-check/5976-ellipse-shape.mmd b/e2e/diagrams/flowchart/pr-check/5976-ellipse-shape.mmd
+new file mode 100644
+index 000000000..098b79d25
+--- /dev/null
++++ b/e2e/diagrams/flowchart/pr-check/5976-ellipse-shape.mmd
+@@ -0,0 +1,7 @@
++%% The `A(-text-)` ellipse renders as an oval instead of failing with "No such shape: ellipse" (#5976).
++flowchart LR
++  A(-Ellipse-) --> B[Rectangle] --> C(-A longer ellipse label that wraps-)
++  C --> D(-Styled-)
++  A --> D
++  classDef warm fill:#fde68a,stroke:#b45309
++  class D warm
+diff --git a/packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts b/packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts
+index a8ed924bc..f5407e816 100644
+--- a/packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts
++++ b/packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts
+@@ -1,6 +1,7 @@
+ import { FlowDB } from './flowDb.js';
+ import type { FlowSubGraph, FlowText } from './types.js';
+ import flow from './parser/flowParser.js';
++import { isValidShape } from '../../rendering-util/rendering-elements/shapes.js';
+ 
+ describe('flow db subgraphs', () => {
+   let flowDb: FlowDB;
+@@ -165,6 +166,16 @@ describe('flow db getData', () => {
+     expect(edges[2].curve).toBe('catmullRom');
+     expect(edges[3].curve).toBe('stepBefore');
+   });
++
++  it('should give ellipse vertices a shape that can be rendered', () => {
++    flow.parser.yy = flowDb;
++    flow.parser.parse('flowchart TD\nA(-this is an ellipse-)-->B');
++
++    const { nodes } = flowDb.getData();
++    const node = nodes.find((n) => n.id === 'A');
++    expect(node?.shape).toBe('usecaseEllipse');
++    expect(isValidShape(node!.shape!)).toBe(true);
++  });
+ });
+ 
+ describe('flow db collapsible subgraphs', () => {
+diff --git a/packages/mermaid/src/diagrams/flowchart/flowDb.ts b/packages/mermaid/src/diagrams/flowchart/flowDb.ts
+index 5b6eb8761..2b4aedc4d 100644
+--- a/packages/mermaid/src/diagrams/flowchart/flowDb.ts
++++ b/packages/mermaid/src/diagrams/flowchart/flowDb.ts
+@@ -1042,8 +1042,8 @@ You have to call mermaid.initialize.`
+       case 'round':
+         return 'roundedRect';
+       case 'ellipse':
+-        // @ts-expect-error -- Ellipses are broken, see https://github.com/mermaid-js/mermaid/issues/5976
+-        return 'ellipse';
++        // There is no shared `ellipse` shape, so `A(-text-)` reuses the use case oval
++        return 'usecaseEllipse';
+       default:
+         return vertex.type;
+     }
