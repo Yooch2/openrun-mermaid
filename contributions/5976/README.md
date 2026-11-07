@@ -4,7 +4,7 @@
 - PR: https://github.com/mermaid-js/mermaid/pull/8571
 - 작업 브랜치: https://github.com/Yooch2/mermaid/tree/bug/5976_flowchart-ellipse-shape
 - 담당: [@Yooch2](https://github.com/Yooch2)
-- 상태: 메인테이너 리뷰 대기 (10/27 제출)
+- 상태: ✅ **승인됨, 머지 대기** (10/27 제출 → 11/7 승인)
 
 메인 이슈 [#7013](../7013/)(PR #8456)이 머지되지 않을 경우에 대비해 **추가로 진행한 기여**입니다. 팀 예비 이슈로 확보해 두었다가, #7013 PR을 마친 뒤 작업했습니다.
 
@@ -95,6 +95,21 @@ block 다이어그램은 문법 단계에서 막히는 별개 문제이고, agen
 | codecov | 수정한 줄 100% 테스트 |
 
 ![CodeRabbit 결과](coderabbit-review-no-issues.png)
+
+## 리뷰와 승인
+
+리뷰어 filipsajdak(Collaborator)이 develop에 이 PR을 합친 상태로 직접 실행해 보고 승인했습니다.
+
+> This fixes #5976 and I found no defect.
+> Mapping to `usecaseEllipse` instead of registering `ellipse` is a reasonable choice given the usecase spec.
+
+기본 문법, `classDef`·`style`, 손그림 모양, ELK 레이아웃까지 수정 전에는 에러였던 것이 모두 타원으로 그려지는 것을 확인했고, 처음 방식을 바꾼 설계 결정도 합리적이라고 평가했습니다.
+
+![승인 리뷰](github-review-approved.png)
+
+같은 날 리뷰어가 정리한 커뮤니티 PR 트래커(#8711)에서 이 PR은 "승인, 겹침·충돌 없음"으로 분류돼, 머지할 준비가 된 PR 목록에 들어갔습니다.
+
+![트래커 분류](triage-tracker-ready-to-merge.png)
 
 ## PR 이후 소통
 

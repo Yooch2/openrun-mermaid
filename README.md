@@ -10,7 +10,7 @@
 
 ## 진행 현황
 
-> 2026-10-30 기준
+> 2026-11-07 기준
 
 | 이슈 | 내용 | 담당 | PR | 작업 브랜치 (포크) | 상태 |
 |---|---|---|---|---|---|
@@ -18,7 +18,7 @@
 | [#7023](https://github.com/mermaid-js/mermaid/issues/7023) | `click`이라는 이름의 노드가 그려지지 않음 | @llmdlng | [#8421](https://github.com/mermaid-js/mermaid/pull/8421) | [llmdlng/mermaid](https://github.com/llmdlng/mermaid/tree/bug/7023_flowchart-click-node) | 리뷰 대기 |
 | [#7041](https://github.com/mermaid-js/mermaid/issues/7041) | `style A,B`로 여러 노드에 스타일 지정이 안 됨 | @hoseongdev | [#8506](https://github.com/mermaid-js/mermaid/pull/8506) | [hoseongdev/mermaid](https://github.com/hoseongdev/mermaid/tree/feature/7041_flowchart-multiple-node-styles) | 리뷰 대기 |
 | [#7013](https://github.com/mermaid-js/mermaid/issues/7013) | `htmlLabels: false`에서 백틱(`) 안 글자가 사라짐 | @Yooch2 | [#8456](https://github.com/mermaid-js/mermaid/pull/8456) | [Yooch2/mermaid](https://github.com/Yooch2/mermaid/tree/bug/7013_keep-inline-code-in-labels) | 리뷰 대기 |
-| [#5976](https://github.com/mermaid-js/mermaid/issues/5976) | flowchart 타원 문법 `A(-text-)`가 그려지지 않음 | @Yooch2 | [#8571](https://github.com/mermaid-js/mermaid/pull/8571) | [Yooch2/mermaid](https://github.com/Yooch2/mermaid/tree/bug/5976_flowchart-ellipse-shape) | 리뷰 대기 |
+| [#5976](https://github.com/mermaid-js/mermaid/issues/5976) | flowchart 타원 문법 `A(-text-)`가 그려지지 않음 | @Yooch2 | [#8571](https://github.com/mermaid-js/mermaid/pull/8571) | [Yooch2/mermaid](https://github.com/Yooch2/mermaid/tree/bug/5976_flowchart-ellipse-shape) | ✅ **승인됨**, 머지 대기 (11/7) |
 
 - 5개 이슈 모두 메인테이너가 `Status: Approved`를 붙인 이슈입니다.
 - 모든 PR에 단위 테스트와 changeset(변경 기록)을 포함했습니다.
@@ -53,6 +53,7 @@ Mermaid는 텍스트로 순서도, 마인드맵 같은 다이어그램을 그리
 | 10/19 ~ 10/20 | #8459 메인테이너 리뷰 → 반영 → 승인 → **머지** |
 | 10/20 | #8506 제출 (#7041) |
 | 10/27 | #8571 제출 (#5976), 로컬에서 e2e까지 검증 후 제출 |
+| 11/7 | #8571 리뷰어 승인, 커뮤니티 PR 정리 트래커에서 "머지 준비 완료"로 분류 |
 
 날짜는 모두 한국 시간 기준입니다.
 
