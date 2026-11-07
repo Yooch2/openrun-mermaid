@@ -85,6 +85,12 @@ if (node.type === 'text' || node.type === 'codespan') {
 
 ![PR 화면](github-pr-bots.png)
 
+## 리뷰 요청
+
+다른 기여자의 PR #8502(같은 함수에서 굵게+기울임 스타일이 사라지는 버그)를 리뷰하던 filipsajdak(Collaborator)이 이 PR을 "같은 함수의 관련 버그"로 언급하고, 두 PR을 합쳐도 충돌이 없다고 확인했습니다. 같은 함수를 막 검토한 리뷰어라 이 PR의 리뷰를 직접 부탁했습니다(11/7).
+
+![리뷰 요청](github-review-request.png)
+
 ## 범위 밖
 
 - 라벨을 단어 단위로 나눠 그리는 구조 때문에 `superstar`와 `!` 사이에 공백이 생깁니다. 굵게(`**the**!`)에서도 같은 기존 동작이라 따로 다룰 문제로 남겼습니다.
